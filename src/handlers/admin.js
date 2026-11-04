@@ -1,3 +1,11 @@
+/**
+ * ╔═╗ ╔═╗ ╔╗  ╔══ ╔═╗ ╔═╗ ╔╦╗ ╔═╗
+ * ╚═╗ ║ ║ ╠╩╗ ╠═  ╠╦╝ ╚═╗ ║║║ ╚═╗
+ * ╚═╝ ╚═╝ ╚═╝ ╚══ ╩╚═ ╚═╝ ╩ ╩ ╚═╝
+ * @author Dev Soberano
+ * @link https://github.com/dev-soberano
+ * @project SoberSMS
+ */
 const db = require("../db");
 const kb = require("../keyboards");
 const config = require("../config");

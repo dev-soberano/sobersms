@@ -1,4 +1,14 @@
+<!--
+  ╔═╗ ╔═╗ ╔╗  ╔══ ╔═╗ ╔═╗ ╔╦╗ ╔═╗
+  ╚═╗ ║ ║ ╠╩╗ ╠═  ╠╦╝ ╚═╗ ║║║ ╚═╗
+  ╚═╝ ╚═╝ ╚═╝ ╚══ ╩╚═ ╚═╝ ╩ ╩ ╚═╝
+  @author Dev Soberano
+  @link https://github.com/dev-soberano
+  @project SoberSMS
+-->
 <div align="center">
+
+![SoberSMS — receba SMS com números virtuais](assets/banner.jpg)
 
 # 🤖 SoberSMS
 

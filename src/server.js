@@ -1,3 +1,11 @@
+/**
+ * ╔═╗ ╔═╗ ╔╗  ╔══ ╔═╗ ╔═╗ ╔╦╗ ╔═╗
+ * ╚═╗ ║ ║ ╠╩╗ ╠═  ╠╦╝ ╚═╗ ║║║ ╚═╗
+ * ╚═╝ ╚═╝ ╚═╝ ╚══ ╩╚═ ╚═╝ ╩ ╩ ╚═╝
+ * @author Dev Soberano
+ * @link https://github.com/dev-soberano
+ * @project SoberSMS
+ */
 const express = require("express");
 const bot = require("./bot");
 const db = require("./db");

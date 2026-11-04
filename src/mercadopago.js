@@ -1,3 +1,11 @@
+/**
+ * ╔═╗ ╔═╗ ╔╗  ╔══ ╔═╗ ╔═╗ ╔╦╗ ╔═╗
+ * ╚═╗ ║ ║ ╠╩╗ ╠═  ╠╦╝ ╚═╗ ║║║ ╚═╗
+ * ╚═╝ ╚═╝ ╚═╝ ╚══ ╩╚═ ╚═╝ ╩ ╩ ╚═╝
+ * @author Dev Soberano
+ * @link https://github.com/dev-soberano
+ * @project SoberSMS
+ */
 // ============================================================================
 // SoberSMS → Mercado Pago (Pix) — via API REST, sem SDK.
 // Mesma interface do módulo de pagamento (createPixPayment / getPayment /

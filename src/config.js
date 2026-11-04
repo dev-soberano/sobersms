@@ -1,3 +1,11 @@
+/**
+ * ╔═╗ ╔═╗ ╔╗  ╔══ ╔═╗ ╔═╗ ╔╦╗ ╔═╗
+ * ╚═╗ ║ ║ ╠╩╗ ╠═  ╠╦╝ ╚═╗ ║║║ ╚═╗
+ * ╚═╝ ╚═╝ ╚═╝ ╚══ ╩╚═ ╚═╝ ╩ ╩ ╚═╝
+ * @author Dev Soberano
+ * @link https://github.com/dev-soberano
+ * @project SoberSMS
+ */
 require("dotenv").config();
 
 const settings = require("./settings");

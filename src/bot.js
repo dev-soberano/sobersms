@@ -1,3 +1,11 @@
+/**
+ * ╔═╗ ╔═╗ ╔╗  ╔══ ╔═╗ ╔═╗ ╔╦╗ ╔═╗
+ * ╚═╗ ║ ║ ╠╩╗ ╠═  ╠╦╝ ╚═╗ ║║║ ╚═╗
+ * ╚═╝ ╚═╝ ╚═╝ ╚══ ╩╚═ ╚═╝ ╩ ╩ ╚═╝
+ * @author Dev Soberano
+ * @link https://github.com/dev-soberano
+ * @project SoberSMS
+ */
 const { Telegraf } = require("telegraf");
 const config = require("./config");
 const userHandlers = require("./handlers/user");
