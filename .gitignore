@@ -1,0 +1,13 @@
+# Dependências
+node_modules/
+
+# Segredos e dados do usuário — nunca sobem
+.env
+settings.json
+sobersms.json
+assets/welcome.jpg
+
+# Bancos e logs locais
+*.db
+*.sqlite
+*.log
