@@ -12,6 +12,15 @@ if (!config.botToken) {
 
 const bot = new Telegraf(config.botToken);
 
+// SÓ PRIVADO: em grupo o bot não responde absolutamente nada. Motivo: chave de
+// API, saldo, pedidos e configuração são assunto entre o bot e o dono/cliente —
+// num grupo isso vaza para todo mundo, e alguém podia mandar uma chave (verdadeira
+// ou falsa) que o bot aceitaria sem querer.
+bot.use(async (ctx, next) => {
+  if (ctx.chat && ctx.chat.type !== "private") return;
+  return next();
+});
+
 configHandlers.register(bot); // antes: estados "cfg_*" são dele
 adminHandlers.register(bot);
 userHandlers.register(bot);

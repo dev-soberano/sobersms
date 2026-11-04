@@ -71,8 +71,9 @@ const TUTORIAL = `📚 <b>Como colocar seu bot no ar</b> — passo a passo
 • Pronto, você é o dono: o bot reconhece o primeiro usuário
 
 <b>5️⃣ Configure pelo Telegram</b>
-• Menu → <b>⚙️ Configurações</b>
+• Abra o bot no <b>privado</b> → Menu → <b>⚙️ Configurações</b>
 • Coloque sua <b>chave da API de números</b> (gsk_live_…)
+  — pegue em <code>gotica-sms.com</code> → botão 🔌 API → Minha chave
 • Escolha o <b>pagamento</b> (MisticPay ou Mercado Pago) e cole as credenciais
 • Ajuste o <b>nome</b>, a <b>imagem do /start</b> e os <b>preços</b> se quiser
 
@@ -156,7 +157,7 @@ function register(bot) {
     await ctx.answerCbQuery();
     await ctx.replyWithHTML(
       "🔑 <b>API de números</b>\n\nCole sua chave (começa com <code>gsk_live_</code>).\n\n" +
-        "Pegue no painel do seu site → botão <b>🔌 API</b> → <i>Minha chave</i>.",
+        "Pegue no painel da <b>Gótica SMS</b> em <code>gotica-sms.com</code> → botão <b>🔌 API</b> → <i>Minha chave</i>.",
       kb.backButton("admin:config")
     );
   });
@@ -244,6 +245,9 @@ function register(bot) {
   bot.on("text", async (ctx, next) => {
     const s = state.getState(ctx.from.id);
     if (!s || !String(s.step).startsWith("cfg_")) return next();
+    // Configuração só existe no PRIVADO e só com o dono: nada de aceitar
+    // chave ou credencial mandada em grupo.
+    if (!ctx.chat || ctx.chat.type !== "private") return next();
     if (!config.ehDono(ctx.from.id)) {
       state.clearState(ctx.from.id);
       return;
@@ -352,6 +356,8 @@ function register(bot) {
   const salvarImagem = async (ctx) => {
     const s = state.getState(ctx.from.id);
     if (!s || s.step !== "cfg_imagem") return false;
+    // Imagem só é aceita no PRIVADO, vinda do dono.
+    if (!ctx.chat || ctx.chat.type !== "private") return false;
     if (!config.ehDono(ctx.from.id)) {
       state.clearState(ctx.from.id);
       return true;

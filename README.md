@@ -98,10 +98,10 @@ Menu → **⚙️ Configurações**:
 
 ## 🔑 De onde vêm os números
 
-Os números vêm da **API da Gótica SMS** — você precisa de uma conta lá para
-gerar sua chave (`gsk_live_...`).
+Os números vêm da **API da Gótica SMS** ([gotica-sms.com](https://gotica-sms.com)) —
+você precisa de uma conta lá para gerar sua chave (`gsk_live_...`).
 
-1. Crie sua conta e faça login no painel
+1. Crie sua conta em **gotica-sms.com** e faça login no painel
 2. Clique em **🔌 API** no topo
 3. Em **Minha chave**, clique em **Gerar nova chave**
 4. Copie (ela aparece uma única vez) e cole no painel do bot
