@@ -51,6 +51,35 @@ module.exports = {
   get welcomeImage() {
     return val("welcomeImage", "WELCOME_IMAGE", "assets/bah.png");
   },
+  get canalReferencia() {
+    return val("canalReferencia", "CANAL_REFERENCIA", "");
+  },
+
+  // --- Servicos SMS vendidos ---
+  // Botoes da tela de compra. O dono pode ajustar em settings.json
+  // (chave smsProducts). Qualquer outro servico e acessivel pelo
+  // "Outro servico" (o cliente digita o nome em ingles).
+  get smsProducts() {
+    const v = settings.get("smsProducts");
+    if (Array.isArray(v) && v.length) return v;
+    return [
+      { code: "whatsapp", label: "💬 WhatsApp" },
+      { code: "telegram", label: "✈️ Telegram" },
+      { code: "instagram", label: "📸 Instagram" },
+      { code: "facebook", label: "👤 Facebook" },
+      { code: "tiktok", label: "🎵 TikTok" },
+      { code: "google", label: "🔍 Google" },
+      { code: "twitter", label: "🐦 Twitter / X" },
+      { code: "discord", label: "🎮 Discord" },
+      { code: "netflix", label: "🎬 Netflix" },
+      { code: "spotify", label: "🎧 Spotify" },
+      { code: "openai", label: "🤖 OpenAI" },
+      { code: "uber", label: "🚗 Uber" },
+      { code: "ifood", label: "🍔 iFood" },
+      { code: "shopee", label: "🛍️ Shopee" },
+      { code: "mercadolivre", label: "📦 Mercado Livre" },
+    ];
+  },
 
   // --- API de números (Gótica SMS) ---
   // Endereço FIXO de propósito: este bot foi feito para a API da Gótica SMS.

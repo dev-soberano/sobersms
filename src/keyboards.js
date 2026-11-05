@@ -163,7 +163,7 @@ function chunk(arr, size) {
 }
 
 function smsProductsKb(products) {
-  const buttons = products.map((p) => stripEmoji(p.label));
+  const buttons = (products || []).map((p) => stripEmoji(p.label));
   const rows = chunk(buttons, 2);
   rows.push(["🔎 Outro serviço"]);
   rows.push(["⬅️ Voltar"]);
